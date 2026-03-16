@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wpg E-learning – JS Legal Force</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <header class="quiz-header">
+    <div class="header-inner">
+      <svg class="header-schild" viewBox="0 0 36 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 0L36 8V22C36 32 28 39 18 42C8 39 0 32 0 22V8L18 0Z" fill="#8a9ab5" opacity="0.3"/>
+        <path d="M18 3L33 10V22C33 31 26 37.5 18 40C10 37.5 3 31 3 22V10L18 3Z" fill="#8a9ab5" opacity="0.5"/>
+        <text x="18" y="27" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="800" font-size="14" fill="white">JS</text>
+      </svg>
+      <span class="logo-tekst">Legal Force</span>
+    </div>
+    <div class="header-lijn"></div>
+    <p class="header-sub">Wet Politiegegevens — E-learning voor BOA's</p>
+  </header>
+
+  <main class="quiz-wrapper">
+
+    <!-- NAAMSCHERM -->
+    <div id="scherm-naam" class="scherm actief">
+      <div class="card">
+        <span class="start-badge">Stap 1 — Gegevens invullen</span>
+        <h1 class="start-titel">Jouw gegevens</h1>
+        <p class="start-ondertitel">Vul je naam in voordat je begint. Deze gegevens worden gebruikt voor het certificaat na het succesvol afronden van de e-learning.</p>
+        <div class="form-groep">
+          <label class="form-label" for="input-voornaam">Voornaam *</label>
+          <input type="text" id="input-voornaam" class="form-input" placeholder="bijv. Jan" />
+        </div>
+        <div class="form-groep">
+          <label class="form-label" for="input-achternaam">Achternaam *</label>
+          <input type="text" id="input-achternaam" class="form-input" placeholder="bijv. de Vries" />
+        </div>
+        <div class="form-groep">
+          <label class="form-label" for="input-organisatie">Organisatie <span class="optioneel">(optioneel)</span></label>
+          <input type="text" id="input-organisatie" class="form-input" placeholder="bijv. Gemeente Amsterdam" />
+        </div>
+        <p id="naam-fout" class="fout-melding">Vul je voornaam en achternaam in om door te gaan.</p>
+        <button id="btn-naar-start" class="knop-primair">Verder naar de e-learning →</button>
+      </div>
+    </div>
+
+    <!-- STARTSCHERM -->
+    <div id="scherm-start" class="scherm">
+      <div class="card">
+        <span class="start-badge">BOA — Wpg Auditvoorbereiding</span>
+        <h1 class="start-titel" id="start-welkom">Wet Politiegegevens<br>E-learning</h1>
+        <p class="start-ondertitel">Per onderwerp lees je eerst de theorie. Daarna maak je twee kennistoetsvragen. Na alle 12 onderwerpen zie je je score en kun je het certificaat downloaden.</p>
+        <div class="start-info-grid">
+          <div class="info-item">
+            <span class="info-getal">12</span>
+            <span class="info-label">Onderwerpen</span>
+          </div>
+          <div class="info-item">
+            <span class="info-getal">24</span>
+            <span class="info-label">Vragen</span>
+          </div>
+          <div class="info-item">
+            <span class="info-getal">70%</span>
+            <span class="info-label">Slagingsdrempel</span>
+          </div>
+        </div>
+        <button id="btn-start" class="knop-primair">Start de e-learning →</button>
+      </div>
+    </div>
+
+    <!-- INTRODUCTIE SCHERM -->
+    <div id="scherm-intro" class="scherm">
+      <div class="voortgang-wrapper">
+        <div class="voortgang-header">
+          <span id="intro-voortgang-tekst" class="voortgang-label"></span>
+        </div>
+        <div class="voortgang-track">
+          <div id="intro-voortgang-balk" class="voortgang-balk"></div>
+        </div>
+      </div>
+      <div class="card intro-card">
+        <div class="intro-hero">
+          <div id="intro-icoon" class="intro-icoon"></div>
+          <div class="intro-hero-tekst">
+            <div class="intro-header">
+              <span id="intro-thema-badge" class="intro-thema-badge"></span>
+              <span id="intro-artikel-badge" class="intro-artikel-badge"></span>
+            </div>
+            <h2 id="intro-titel" class="intro-titel"></h2>
+          </div>
+        </div>
+        <div id="intro-tekst" class="intro-tekst"></div>
+        <div class="intro-footer">
+          <div id="intro-aftellen" class="aftellen">
+            <div id="aftellen-ring" class="aftellen-ring">
+              <svg viewBox="0 0 36 36">
+                <circle cx="18" cy="18" r="15" fill="none" stroke="#dde2ef" stroke-width="3"/>
+                <circle id="aftellen-cirkel" cx="18" cy="18" r="15" fill="none" stroke="#1a2a5e" stroke-width="3"
+                  stroke-dasharray="94.2" stroke-dashoffset="0" stroke-linecap="round"
+                  transform="rotate(-90 18 18)"/>
+              </svg>
+              <span id="aftellen-getal" class="aftellen-getal">10</span>
+            </div>
+            <span class="aftellen-tekst">Lees de theorie door</span>
+          </div>
+          <button id="btn-naar-vragen" class="knop-primair" disabled>Naar de vragen →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- VRAAGSCHERM -->
+    <div id="scherm-vraag" class="scherm">
+      <div class="voortgang-wrapper">
+        <div class="voortgang-header">
+          <span id="voortgang-tekst" class="voortgang-label"></span>
+        </div>
+        <div class="voortgang-track">
+          <div id="voortgang-balk" class="voortgang-balk"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="vraag-meta">
+          <span id="vraag-thema" class="vraag-thema-badge"></span>
+          <span id="vraag-nummer-badge" class="vraag-nummer-badge"></span>
+        </div>
+        <p id="vraag-tekst" class="vraag-tekst"></p>
+        <div id="opties-container" class="opties-container"></div>
+        <div id="feedback-container" class="feedback-container">
+          <span class="feedback-icon" id="feedback-icon"></span>
+          <div><span id="feedback-tekst"></span><span id="feedback-artikel" class="feedback-artikel"></span></div>
+        </div>
+        <button id="btn-volgende" class="knop-primair">Volgende →</button>
+      </div>
+    </div>
+
+    <!-- HERKANSING INTRO -->
+    <div id="scherm-herkansing-intro" class="scherm">
+      <div class="card">
+        <span class="start-badge">Herkansingsmodus</span>
+        <h2 class="start-titel">Nog een kans!</h2>
+        <p class="start-ondertitel" id="herkansing-intro-tekst"></p>
+        <button id="btn-start-herkansing" class="knop-primair">Start herkansing →</button>
+        <button id="btn-sla-herkansing-over" class="knop-sekundair">Ga direct naar het resultaat</button>
+      </div>
+    </div>
+
+    <!-- EINDSCHERM -->
+    <div id="scherm-einde" class="scherm">
+      <div class="card">
+        <div class="einde-header">
+          <h2 class="einde-titel">Resultaat</h2>
+          <p id="einde-naam-tekst" class="einde-subtitel"></p>
+        </div>
+        <div class="score-blok-wrapper">
+          <div class="score-blok">
+            <div id="eind-percentage" class="score-getal">—</div>
+            <div class="score-label">Behaald percentage</div>
+            <div id="eind-score" class="score-detail"></div>
+          </div>
+        </div>
+        <div id="eind-beoordeling" class="beoordeling"></div>
+        <p id="eind-beoordeling-tekst" class="beoordeling-tekst"></p>
+        <div class="auditpunt-overzicht-titel">Resultaat per onderwerp</div>
+        <div id="auditpunt-overzicht" class="auditpunt-overzicht"></div>
+        <button id="btn-certificaat" class="knop-primair knop-certificaat">↓ Download certificaat (PDF)</button>
+        <button id="btn-herstart" class="knop-sekundair">Opnieuw beginnen</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="quiz-footer">© JS Legal Force — Wpg E-learning voor BOA's</footer>
+
+  <script src="questions.js"></script>
+  <script src="content.js"></script>
+  <script src="quiz.js"></script>
+</body>
+</html>
