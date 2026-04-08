@@ -86,9 +86,9 @@ const THEMA_INHOUD = [
     artikel: "Art. 3 lid 2 en 5 Wpg",
     titel: "Noodzakelijkheid & herkomst",
     tekst: `
-    <p>Een BOA mag alleen politiegegevens verwerken als dit noodzakelijk is voor zijn opsporingstaak. Niet elk gegeven dat interessant lijkt mag worden vastgelegd. Er moet altijd een directe relatie zijn met een concrete opsporingshandeling.</p>
-    <p>De Wpg schrijft voor dat de verwerking ook rechtmatig moet zijn. Dit betekent dat er een wettelijke grondslag moet bestaan voor wat de BOA doet. Handelen zonder grondslag is niet toegestaan, ook al is de intentie goed.</p>
-    <p>Naast de noodzakelijkheid moet de herkomst van gegevens worden vastgelegd. Is het een eigen waarneming? Een melding van een burger? Of informatie van een collega? Die herkomst is essentieel. Zonder herkomstvermelding kan de betrouwbaarheid van gegevens later niet worden beoordeeld.</p>
+    <p>Een BOA mag alleen politiegegevens verwerken als dat noodzakelijk is voor zijn opsporingstaak. Niet elk gegeven dat interessant lijkt mag worden vastgelegd. Er moet altijd een directe relatie zijn met een concrete opsporingshandeling.</p>
+    <p>De verwerking moet ook rechtmatig zijn: er moet een wettelijke grondslag bestaan voor wat de BOA doet. Handelen zonder grondslag is niet toegestaan, ook niet als de intentie goed is.</p>
+    <p>Naast de noodzakelijkheid moet de herkomst van gegevens worden vastgelegd. Is het een eigen waarneming? Een melding van een burger? Informatie van een collega? Die herkomst is essentieel — zonder herkomstvermelding is de betrouwbaarheid van gegevens later niet te beoordelen.</p>
     `
   },
   {
@@ -96,9 +96,9 @@ const THEMA_INHOUD = [
     artikel: "Art. 4 lid 1 Wpg",
     titel: "Juistheid & volledigheid",
     tekst: `
-    <p>Politiegegevens moeten juist, volledig en ter zake dienend zijn. In de praktijk sluipen er regelmatig fouten in registraties. Denk aan een verkeerd gespelde naam, een niet geverifieerd adres of een kenteken dat uit het hoofd is opgeschreven.</p>
-    <p>Onjuiste gegevens kunnen grote gevolgen hebben voor een betrokkene. Iemand kan ten onrechte als verdachte worden aangemerkt of een beslissing kan worden genomen op basis van verkeerde informatie.</p>
-    <p>De verwerkingsverantwoordelijke is verplicht processen in te richten die de kwaliteit van gegevens waarborgen. Dit is geen vrijblijvende aanbeveling. Er moet aantoonbaar aandacht aan worden besteed en medewerkers moeten hierop worden aangesproken.</p>
+    <p>Politiegegevens moeten juist, volledig en ter zake dienend zijn. In de praktijk sluipen er regelmatig fouten in registraties: een verkeerd gespelde naam, een niet geverifieerd adres, een kenteken dat uit het hoofd is opgeschreven.</p>
+    <p>Onjuiste gegevens kunnen grote gevolgen hebben. Iemand kan ten onrechte als verdachte worden aangemerkt, of een beslissing kan worden genomen op basis van verkeerde informatie.</p>
+    <p>De verwerkingsverantwoordelijke moet processen inrichten die de kwaliteit van gegevens borgen. Dit is geen vrijblijvende aanbeveling. Er moet aantoonbaar aandacht aan worden besteed en medewerkers moeten hierop worden aangesproken.</p>
     `
   },
   {
@@ -106,9 +106,9 @@ const THEMA_INHOUD = [
     artikel: "Art. 4 lid 3 Wpg",
     titel: "Onderscheid feiten en oordeel",
     tekst: `
-    <p>Een veelgemaakte fout in politieregistraties is het vermengen van feiten en persoonlijke oordelen. "Betrokkene gedroeg zich verdacht" is een oordeel. "Betrokkene liep snel weg bij het zien van de BOA" is een feit. Dit verschil lijkt subtiel maar is juridisch essentieel.</p>
-    <p>De Wpg verplicht een BOA om dit onderscheid expliciet te maken in zijn registraties. Dit beschermt de betrokkene tegen onterechte conclusies. Het maakt de registratie ook controleerbaar voor collega's en leidinggevenden.</p>
-    <p>In de praktijk betekent dit: schrijf op wat je feitelijk hebt waargenomen. Geef apart aan wat je daarvan vindt of wat je vermoedt. Gebruik formuleringen als "naar het oordeel van verbalisant" of "verbalisant vermoedt dat" om het onderscheid duidelijk te maken.</p>
+    <p>Een veelgemaakte fout in politieregistraties is het vermengen van feiten en persoonlijke oordelen. "Betrokkene gedroeg zich verdacht" is een oordeel. "Betrokkene liep snel weg bij het zien van de BOA" is een feit. Het verschil lijkt subtiel, maar is juridisch essentieel.</p>
+    <p>De Wpg verplicht een BOA dit onderscheid expliciet te maken. Dat beschermt de betrokkene tegen onterechte conclusies en maakt de registratie controleerbaar voor collega's en leidinggevenden.</p>
+    <p>Schrijf op wat je feitelijk hebt waargenomen. Geef apart aan wat je daarvan vindt of vermoedt. Gebruik formuleringen als "naar het oordeel van verbalisant" of "verbalisant vermoedt dat" om het onderscheid helder te maken.</p>
     `
   },
   {
@@ -117,7 +117,7 @@ const THEMA_INHOUD = [
     titel: "Autorisaties & toegang",
     tekst: `
     <p>Niet iedereen binnen een BOA-organisatie mag politiegegevens inzien. Toegang moet zijn gebaseerd op functie en taakgebonden noodzaak. Een administratief medewerker die processen-verbaal verstuurt heeft andere rechten dan een actief opsporende BOA.</p>
-    <p>De werkgever is verplicht een systeem van autorisaties bij te houden. Daarin staat per medewerker wat hij mag inzien, wijzigen of verstrekken. Dit systeem moet actueel zijn. Als een medewerker van functie verandert of de organisatie verlaat moeten de autorisaties direct worden aangepast.</p>
+    <p>De werkgever moet een actueel autorisatiesysteem bijhouden. Daarin staat per medewerker wat hij mag inzien, wijzigen of verstrekken. Verandert iemand van functie of verlaat hij de organisatie, dan moeten de autorisaties direct worden aangepast.</p>
     <p>Toegang verlenen aan iemand die dit voor zijn taak niet nodig heeft is een overtreding van de Wpg. Het autorisatiesysteem wordt getoetst op opzet, bestaan én werking — niet alleen op papier, maar ook in de dagelijkse praktijk.</p>
     `
   },
@@ -126,9 +126,9 @@ const THEMA_INHOUD = [
     artikel: "Art. 6b Wpg",
     titel: "Categorieën betrokkenen",
     tekst: `
-    <p>In een opsporingsonderzoek zijn vaak meerdere personen betrokken. Denk aan een verdachte, een slachtoffer en een getuige. De Wpg verplicht dat deze personen als aparte categorieën worden geregistreerd.</p>
-    <p>Een verdachte heeft andere rechten dan een slachtoffer. Als beide onder dezelfde categorie worden geregistreerd kunnen die rechten niet correct worden toegepast. Dit kan leiden tot fouten bij inzageverzoeken en bij de beoordeling van bezwaar en beroep.</p>
-    <p>Het gaat niet alleen om de technische inrichting van het systeem. Het gaat er ook om dat BOA's in hun dagelijkse werk bewust zijn van dit onderscheid en ernaar handelen.</p>
+    <p>In een opsporingsonderzoek zijn vaak meerdere personen betrokken: een verdachte, een slachtoffer en een getuige. De Wpg verplicht dat deze personen als aparte categorieën worden geregistreerd.</p>
+    <p>Een verdachte heeft andere rechten dan een slachtoffer. Worden beiden onder dezelfde categorie geregistreerd, dan kunnen die rechten niet correct worden toegepast. Dat leidt tot fouten bij inzageverzoeken en bij de beoordeling van bezwaar en beroep.</p>
+    <p>Het gaat niet alleen om de technische inrichting van het systeem. BOA's moeten in hun dagelijkse werk bewust zijn van dit onderscheid en er ook naar handelen.</p>
     `
   },
   {
@@ -136,9 +136,9 @@ const THEMA_INHOUD = [
     artikel: "Art. 7 Wpg",
     titel: "Geheimhoudingsplicht",
     tekst: `
-    <p>Iedereen die politiegegevens verwerkt of er toegang toe heeft is verplicht tot geheimhouding. Dit geldt niet alleen tijdens werktijd. Het geldt ook na werktijd en ook voor gegevens van collega's waar je toegang toe hebt.</p>
-    <p>De geheimhoudingsplicht reist mee met de gegevens. Als politiegegevens worden verstrekt aan een derde partij is die partij eveneens gebonden aan geheimhouding. De ontvanger mag de gegevens alleen gebruiken voor het doel waarvoor ze zijn verstrekt.</p>
-    <p>In de praktijk betekent dit: geen politiegegevens delen via privéberichten of sociale media. Niet bespreken in het openbaar. Niet opslaan op privéapparaten of in privécloud-omgevingen. Schending van de geheimhoudingsplicht kan leiden tot disciplinaire maatregelen en strafrechtelijke vervolging.</p>
+    <p>Iedereen die politiegegevens verwerkt of er toegang toe heeft is verplicht tot geheimhouding — ook na werktijd en ook voor gegevens van collega's waartoe je toegang hebt.</p>
+    <p>De geheimhoudingsplicht reist mee met de gegevens. Worden politiegegevens verstrekt aan een derde partij, dan is die partij eveneens gebonden aan geheimhouding. De ontvanger mag de gegevens alleen gebruiken voor het doel waarvoor ze zijn verstrekt.</p>
+    <p>Concreet: geen politiegegevens delen via privéberichten of sociale media. Niet bespreken in het openbaar. Niet opslaan op privéapparaten of in privécloud-omgevingen. Schending van de geheimhoudingsplicht kan leiden tot disciplinaire maatregelen én strafrechtelijke vervolging.</p>
     `
   },
   {
@@ -146,9 +146,9 @@ const THEMA_INHOUD = [
     artikel: "Art. 8 lid 1 en 2 Wpg",
     titel: "Dagelijkse opsporingstaak",
     tekst: `
-    <p>Het merendeel van de verwerkingen door een BOA valt onder artikel 8 van de Wpg. Dit zijn de alledaagse opsporingshandelingen. Denk aan het opmaken van een proces-verbaal voor wildplassen, het vastleggen van gegevens bij een parkeerovertreding of het opnemen van een aangifte van vernieling.</p>
-    <p>Artikel 8-gegevens kennen een getrapt regime. In het eerste jaar mogen gegevens breed worden gebruikt voor lopende onderzoeken. Van jaar 2 tot en met jaar 5 is alleen gericht zoeken toegestaan — er moet een aanleiding zijn. Na vijf jaar begint de bewaartermijn van nogmaals vijf jaar, waarna vernietiging verplicht is.</p>
-    <p>Belangrijk om te weten: ook een waarschuwing zonder boete of proces-verbaal valt al onder de Wpg. Zodra een BOA optreedt in zijn hoedanigheid als opsporingsambtenaar bij een strafbaar feit zijn de regels van de Wpg van toepassing. De afdoening is niet bepalend voor het toepasselijke regime.</p>
+    <p>Het merendeel van de verwerkingen door een BOA valt onder artikel 8 Wpg. Dit zijn de alledaagse opsporingshandelingen: het opmaken van een proces-verbaal voor wildplassen, het vastleggen van gegevens bij een parkeerovertreding, het opnemen van een aangifte van vernieling.</p>
+    <p>Artikel 8-gegevens kennen een getrapt regime. In het eerste jaar mogen gegevens breed worden gebruikt voor lopende onderzoeken. Van jaar 2 tot en met jaar 5 is alleen gericht zoeken toegestaan — er moet een concrete aanleiding zijn. Na vijf jaar begint de bewaartermijn van nogmaals vijf jaar, waarna vernietiging verplicht is.</p>
+    <p>Ook een waarschuwing zonder boete of proces-verbaal valt al onder de Wpg. Zodra een BOA optreedt als opsporingsambtenaar bij een strafbaar feit zijn de regels van de Wpg van toepassing. De afdoening is niet bepalend voor het toepasselijke regime.</p>
     `
   },
   {
@@ -156,9 +156,9 @@ const THEMA_INHOUD = [
     artikel: "Art. 4 lid 2, art. 8 lid 6, art. 9 lid 4 en art. 14 Wpg",
     titel: "Bewaartermijnen, verwijderen en vernietigen",
     tekst: `
-    <p>De Wpg kent strikte bewaartermijnen. Voor artikel 8-gegevens geldt een getrapt regime: in het eerste jaar mogen gegevens breed worden gebruikt. Daarna, van jaar 2 tot en met jaar 5, is alleen gericht zoeken toegestaan. Vervolgens volgt een bewaartermijn van vijf jaar waarin de gegevens uitsluitend beschikbaar zijn voor audits en klachten — delen is niet meer toegestaan. Na die tweede termijn zijn de gegevens verplicht te vernietigen.</p>
-    <p>Voor artikel 9-gegevens is de situatie anders. De verwerkingstermijn loopt totdat het doel van het onderzoek is bereikt. In de praktijk betekent dit: totdat een onherroepelijk vonnis is uitgesproken of de verjaringstermijn is bereikt. Na het bereiken van het doel heeft de bevoegd functionaris zes maanden om gegevens aan te bieden aan collega's voor hergebruik. Daarna volgt ook hier een bewaartermijn van vijf jaar waarna vernietiging verplicht is.</p>
-    <p>Vernietiging na het verstrijken van de bewaartermijn is geen aanbeveling. Het is een harde wettelijke eis. Organisaties moeten aantoonbare processen hebben ingericht om gegevens tijdig te verwijderen en te vernietigen.</p>
+    <p>De Wpg kent strikte bewaartermijnen. Voor artikel 8-gegevens geldt een getrapt regime: in het eerste jaar mogen gegevens breed worden gebruikt. Van jaar 2 tot en met jaar 5 is alleen gericht zoeken toegestaan. Daarna volgt een bewaartermijn van vijf jaar waarin de gegevens uitsluitend beschikbaar zijn voor audits en klachten — delen is niet meer toegestaan. Na die tweede termijn zijn de gegevens verplicht te vernietigen.</p>
+    <p>Voor artikel 9-gegevens is de situatie anders. De verwerkingstermijn loopt totdat het doel van het onderzoek is bereikt — in de praktijk: totdat een onherroepelijk vonnis is uitgesproken of de verjaringstermijn is bereikt. Na het bereiken van het doel heeft de bevoegd functionaris zes maanden om gegevens aan te bieden aan collega's voor hergebruik. Daarna volgt ook hier een bewaartermijn van vijf jaar, waarna vernietiging verplicht is.</p>
+    <p>Vernietiging na het verstrijken van de bewaartermijn is geen aanbeveling. Het is een harde wettelijke eis. Organisaties moeten aantoonbare processen inrichten om gegevens tijdig te verwijderen en te vernietigen.</p>
     `
   },
   {
@@ -166,9 +166,9 @@ const THEMA_INHOUD = [
     artikel: "Art. 16, 18, 19, 21 en 22 Wpg",
     titel: "Verstrekking aan derden",
     tekst: `
-    <p>Politiegegevens mogen alleen worden verstrekt aan partijen buiten het Wpg-domein als daar een wettelijke grondslag voor bestaat. De Wpg noemt een beperkt aantal situaties waarbij dit is toegestaan. Denk aan verstrekking aan de burgemeester voor vergunningsbeslissingen of aan samenwerkingspartners via een rechtsgeldig convenant.</p>
-    <p>Zonder wettelijke grondslag mag niet worden verstrekt. Ook niet als een partij er nadrukkelijk om vraagt. Ook niet als het doel goed en nuttig lijkt. De grondslag moet er altijd zijn voordat gegevens worden verstrekt.</p>
-    <p>Elke verstrekking moet worden vastgelegd. Wie heeft welke gegevens ontvangen, op welke datum en op welke grondslag? Bij een inzageverzoek van een betrokkene moet de organisatie kunnen aantonen met wie zijn gegevens zijn gedeeld. Zonder registratie kan hieraan niet worden voldaan.</p>
+    <p>Politiegegevens mogen alleen worden verstrekt aan partijen buiten het Wpg-domein als daarvoor een wettelijke grondslag bestaat. De Wpg noemt een beperkt aantal situaties waarbij dit is toegestaan — bijvoorbeeld verstrekking aan de burgemeester voor vergunningsbeslissingen of aan samenwerkingspartners via een rechtsgeldig convenant.</p>
+    <p>Zonder wettelijke grondslag mag niet worden verstrekt. Ook niet als een partij er nadrukkelijk om vraagt, en ook niet als het doel goed en nuttig lijkt. De grondslag moet er zijn vóórdat gegevens worden verstrekt.</p>
+    <p>Elke verstrekking moet worden vastgelegd: wie heeft welke gegevens ontvangen, op welke datum en op welke grondslag? Bij een inzageverzoek moet de organisatie kunnen aantonen met wie de gegevens van een betrokkene zijn gedeeld. Zonder registratie kan hieraan niet worden voldaan.</p>
     `
   },
   {
@@ -176,9 +176,9 @@ const THEMA_INHOUD = [
     artikel: "Art. 32 lid 1 t/m 4 Wpg",
     titel: "Documentatie",
     tekst: `
-    <p>De Wpg verplicht BOA-organisaties vier categorieën te documenteren. Dit zijn alle verstrekkingen, alle artikel 9-doeleinden, alle datalekken en alle besluiten op inzageverzoeken — inclusief afwijzingen. Dit is de verantwoordingsplicht van de verwerkingsverantwoordelijke.</p>
-    <p>Elk besluit op een inzageverzoek moet worden vastgelegd, ook als het verzoek wordt afgewezen. Zonder documentatie van een afwijzing kan later niet worden aangetoond dat het besluit rechtmatig tot stand is gekomen.</p>
-    <p>In de praktijk moeten systemen zo zijn ingericht dat de vier categorieën automatisch en volledig worden bijgehouden. Wat niet is gedocumenteerd kan niet worden verantwoord — ook niet tegenover de betrokkene zelf.</p>
+    <p>De Wpg verplicht BOA-organisaties vier categorieën te documenteren: alle verstrekkingen, alle artikel 9-doeleinden, alle datalekken en alle besluiten op inzageverzoeken — inclusief afwijzingen. Dit is de verantwoordingsplicht van de verwerkingsverantwoordelijke.</p>
+    <p>Elk besluit op een inzageverzoek moet worden vastgelegd, ook als het verzoek wordt afgewezen. Zonder documentatie van een afwijzing is achteraf niet aantoonbaar dat het besluit rechtmatig tot stand is gekomen.</p>
+    <p>Systemen moeten zo zijn ingericht dat de vier categorieën automatisch en volledig worden bijgehouden. Wat niet is gedocumenteerd kan niet worden verantwoord — ook niet tegenover de betrokkene zelf.</p>
     `
   },
   {
@@ -186,9 +186,9 @@ const THEMA_INHOUD = [
     artikel: "Art. 32a Wpg",
     titel: "Logging",
     tekst: `
-    <p>Logging houdt in dat alle toegang tot en handelingen met politiegegevens automatisch worden geregistreerd door het informatiesysteem. Wie heeft wanneer welke gegevens ingezien, gewijzigd of verstrekt? Die informatie moet achteraf opvraagbaar zijn.</p>
+    <p>Logging betekent dat alle toegang tot en handelingen met politiegegevens automatisch worden geregistreerd door het informatiesysteem: wie heeft wanneer welke gegevens ingezien, gewijzigd of verstrekt? Die informatie moet achteraf opvraagbaar zijn.</p>
     <p>Logging beschermt zowel de betrokkene als de BOA zelf. De betrokkene kan erop vertrouwen dat zijn gegevens alleen worden ingezien door bevoegden. De BOA kan aantonen dat hij rechtmatig heeft gehandeld als daar later vragen over komen.</p>
-    <p>Een systeem zonder logging of met uitgeschakelde logging voldoet niet aan de Wpg. De logbestanden moeten worden bewaard en er moet periodiek worden gecontroleerd op ongeautoriseerde toegang.</p>
+    <p>Een systeem zonder logging of met uitgeschakelde logging voldoet niet aan de Wpg. Logbestanden moeten worden bewaard en er moet periodiek worden gecontroleerd op ongeautoriseerde toegang.</p>
     `
   },
   {
@@ -196,9 +196,9 @@ const THEMA_INHOUD = [
     artikel: "Art. 33a Wpg",
     titel: "Meldplicht datalekken",
     tekst: `
-    <p>Een datalek is elke inbreuk op de beveiliging van politiegegevens. Het maakt niet uit of het om een gestolen laptop gaat, een e-mail naar het verkeerde adres of ongeautoriseerde toegang door een medewerker. De intentie speelt geen rol. Ook een ongelukje is een datalek dat onverwijld moet worden gemeld.</p>
-    <p>Intern moet een datalek zo snel mogelijk worden gemeld bij de verwerkingsverantwoordelijke. De verwerkingsverantwoordelijke beoordeelt daarna of het datalek ook bij de Autoriteit Persoonsgegevens moet worden gemeld. Daarvoor geldt een termijn van 72 uur.</p>
-    <p>Alle datalekken moeten worden geregistreerd in een intern datalekkenregister. Dit geldt ook voor datalekken die niet bij de AP worden gemeld. Bij een jaarlijkse externe toetsing wordt gecontroleerd of dit register bestaat, wordt bijgehouden en of medewerkers weten hoe zij een datalek herkennen en melden. Twijfel over of iets een datalek is mag geen reden zijn om niet te melden.</p>
+    <p>Een datalek is elke inbreuk op de beveiliging van politiegegevens — of het nu gaat om een gestolen laptop, een e-mail naar het verkeerde adres of ongeautoriseerde toegang door een medewerker. De intentie speelt geen rol. Ook een ongelukje is een datalek dat onverwijld moet worden gemeld.</p>
+    <p>Intern moet een datalek zo snel mogelijk worden gemeld bij de verwerkingsverantwoordelijke. Die beoordeelt daarna of het datalek ook bij de Autoriteit Persoonsgegevens moet worden gemeld. Daarvoor geldt een termijn van 72 uur.</p>
+    <p>Alle datalekken moeten worden geregistreerd in een intern datalekkenregister — ook datalekken die niet bij de AP worden gemeld. Bij een jaarlijkse externe toetsing wordt gecontroleerd of dit register bestaat, wordt bijgehouden en of medewerkers weten hoe zij een datalek herkennen en melden. Twijfel is geen reden om niet te melden.</p>
     `
   }
 ];
