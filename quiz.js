@@ -7,7 +7,6 @@ const CONFIG = {
   afteltijd: 15,
   totaalVragenVast: 24
 };
-
 // State
 let deelnemerNaam = '';
 let deelnemerAchternaam = '';
