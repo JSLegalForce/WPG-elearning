@@ -3,7 +3,7 @@
 // =============================================
 
 const CONFIG = {
-  slagingsdrempel: 0.70,
+  slagingsdrempel: 0.60,
   afteltijd: 15,
   totaalVragenVast: 24
 };
@@ -420,13 +420,14 @@ function toonEinde() {
   toonScherm('einde');
 
   const beoordeeldVragen = CONFIG.totaalVragenVast;
-  const percentage = score / beoordeeldVragen;
+  const veiligScore = Math.min(score, beoordeeldVragen);
+  const percentage = veiligScore / beoordeeldVragen;
   const geslaagd = percentage >= CONFIG.slagingsdrempel;
 
   document.getElementById('einde-naam-tekst').textContent =
     `${deelnemerNaam} ${deelnemerAchternaam}${deelnemerOrganisatie ? ' — ' + deelnemerOrganisatie : ''}`;
   document.getElementById('eind-score').textContent =
-    `${score} van de ${beoordeeldVragen} vragen goed`;
+    `${veiligScore} van de ${beoordeeldVragen} vragen goed`;
   document.getElementById('eind-percentage').textContent =
     Math.round(percentage * 100) + '%';
 
@@ -547,13 +548,14 @@ document.getElementById('btn-certificaat').addEventListener('click', () => {
   );
 
   const beoordeeldVragen = CONFIG.totaalVragenVast;
-  const pct = Math.round((score / beoordeeldVragen) * 100);
+  const veiligScore = Math.min(score, beoordeeldVragen);
+  const pct = Math.round((veiligScore / beoordeeldVragen) * 100);
 
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(12);
   doc.setTextColor(26, 122, 74);
   doc.text(
-    `Score: ${score} van de ${beoordeeldVragen} vragen goed (${pct}%)`,
+    `Score: ${veiligScore} van de ${beoordeeldVragen} vragen goed (${pct}%)`,
     W / 2, 135, { align: 'center' }
   );
 
