@@ -3,7 +3,7 @@
 // =============================================
 
 const CONFIG = {
-  slagingsdrempel: 0.60,
+  slagingsdrempel: 0.70,
   afteltijd: 15,
   totaalVragenVast: 24
 };
