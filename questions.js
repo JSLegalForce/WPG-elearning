@@ -4,17 +4,17 @@ const ALLE_VRAGEN = [
   // THEMA 1: Noodzakelijkheid & herkomst (Art. 3 lid 2 en 5)
   // ============================================================
   {
-    vraag: "Een BOA wil gegevens vastleggen over een persoon die hij verdacht vindt gedragen, maar waarbij geen concrete overtreding is vastgesteld. Wat zegt de Wpg hierover?",
-    thema: "Noodzakelijkheid & herkomst",
-    artikel: "Art. 3 lid 2 Wpg",
+    vraag: "Een BOA ziet tijdens zijn surveillancedienst een persoon die zich volgens hem verdacht gedraagt. Er is echter geen concrete overtreding of strafbaar feit vastgesteld en er wordt op dat moment geen specifieke opsporingshandeling verricht. De BOA overweegt persoonsgegevens van de betrokkene vast te leggen.\n\nWelke uitspraak is het meest in overeenstemming met de Wet politiegegevens (Wpg)?",
+    thema: "Noodzakelijkheid & rechtmatigheid",
+    artikel: "Art. 3 lid 1 en 2 Wpg",
     opties: [
-      "Vastleggen mag altijd als er een redelijk vermoeden bestaat",
-      "Vastleggen is alleen toegestaan als de verwerking noodzakelijk en rechtmatig is voor een concrete opsporingshandeling",
-      "De leidinggevende beoordeelt per geval of vastleggen is toegestaan",
-      "Vastleggen mag altijd; verwijderen kan later alsnog"
+      "Persoonsgegevens mogen worden verwerkt zodra een toezichthouder of opsporingsambtenaar vermoedt dat iemand mogelijk betrokken is bij strafbare feiten.",
+      "Persoonsgegevens mogen worden verwerkt wanneer de verwerking noodzakelijk is voor een rechtmatige uitvoering van de politietaak en een concreet doel dient.",
+      "Persoonsgegevens mogen worden verwerkt als het aannemelijk is dat de gegevens later van belang kunnen zijn voor toekomstige opsporingsactiviteiten.",
+      "Persoonsgegevens mogen worden verwerkt wanneer de ambtenaar achteraf voldoende kan motiveren waarom de gegevens zijn vastgelegd."
     ],
     juist: 1,
-    uitleg: "Artikel 3 lid 2 Wpg bepaalt dat politiegegevens alleen mogen worden verwerkt als dat noodzakelijk en rechtmatig is voor de uitvoering van de opsporingstaak. Een vaag vermoeden zonder concrete handeling volstaat niet als grondslag."
+    uitleg: "Artikel 3 Wpg bepaalt dat politiegegevens uitsluitend mogen worden verwerkt voor zover dit noodzakelijk is voor de uitvoering van de politietaak. Daarnaast moet de verwerking rechtmatig zijn en een concreet doel dienen. Het enkele feit dat iemand zich verdacht gedraagt of mogelijk in de toekomst relevant kan zijn voor een onderzoek, vormt op zichzelf geen voldoende grondslag voor het vastleggen van politiegegevens. — Art. 3 lid 1 en 2 Wpg"
   },
   {
     vraag: "BOA Kevin legt vast dat hij een persoon heeft geobserveerd bij een verdachte locatie. Hij noteert de naam en het tijdstip, maar niet hoe hij de informatie heeft verkregen. Wat ontbreekt er?",
