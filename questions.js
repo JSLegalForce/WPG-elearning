@@ -240,6 +240,19 @@ const ALLE_VRAGEN = [
   uitleg: "Artikel 9 lid 4 Wpg bepaalt dat na het bereiken van het doel de bevoegd functionaris nog 6 maanden heeft om gegevens aan te bieden aan collega's voor hergebruik. Daarna volgt een bewaartermijn van 5 jaar, waarna artikel 14 Wpg verplicht tot vernietiging."
 },
 
+{
+  vraag: "Een BOA-organisatie heeft artikel 8-gegevens die 6 jaar oud zijn. Welk regime is van toepassing?",
+  thema: "Bewaartermijnen",
+  artikel: "Art. 8 lid 6 jo. art. 14 Wpg",
+  opties: [
+    "Breed gebruik is toegestaan omdat de gegevens inmiddels historisch van aard zijn",
+    "Gericht zoeken is nog steeds toegestaan zolang er een concrete aanleiding bestaat",
+    "De gegevens zijn uitsluitend beschikbaar voor audits en klachten; operationeel gebruik is niet meer toegestaan",
+    "De gegevens moeten per direct worden vernietigd omdat de maximale bewaartermijn is bereikt"
+  ],
+  juist: 2,
+  uitleg: "Na 5 jaar actieve verwerking begint de bewaartermijn van nogmaals 5 jaar. In die periode zijn gegevens uitsluitend beschikbaar voor audits en klachten — operationeel gebruik en verstrekken zijn niet meer toegestaan. Na 10 jaar totaal is vernietiging verplicht."
+},
 // ============================================================
 // THEMA 9: Verstrekking aan derden (Art. 16, 18, 19, 21, 22)
 // ============================================================
@@ -300,6 +313,19 @@ const ALLE_VRAGEN = [
   uitleg: "Artikel 32 lid 1 t/m 4 Wpg verplicht documentatie van alle verstrekkingen, artikel 9-doeleinden, datalekken en besluiten op inzageverzoeken. Dat laatste omvat ook afwijzingen: ook een geweigerd inzageverzoek moet worden vastgelegd, zodat achteraf aantoonbaar is dat het besluit rechtmatig tot stand is gekomen."
 },
 
+{
+  vraag: "Een BOA-organisatie wijst een inzageverzoek van een betrokkene af. Moet dit besluit worden gedocumenteerd?",
+  thema: "Documentatie",
+  artikel: "Art. 32 lid 4 Wpg",
+  opties: [
+    "Nee, alleen gehonoreerde inzageverzoeken hoeven te worden vastgelegd",
+    "Alleen als de betrokkene daarna formeel bezwaar aantekent bij de organisatie",
+    "Alleen als de afwijzing schriftelijk en gemotiveerd aan de betrokkene is medegedeeld",
+    "Ja, elk besluit op een inzageverzoek moet worden gedocumenteerd, ook afwijzingen"
+  ],
+  juist: 3,
+  uitleg: "Artikel 32 lid 4 Wpg verplicht het documenteren van alle besluiten op inzageverzoeken, inclusief afwijzingen. Zonder documentatie van een afwijzing is achteraf niet aantoonbaar dat het besluit rechtmatig tot stand is gekomen. Dit geldt ongeacht de reden van afwijzing."
+},
 // ============================================================
 // THEMA 11: Logging (Art. 32a)
 // ============================================================
