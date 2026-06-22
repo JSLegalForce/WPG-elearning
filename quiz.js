@@ -4,9 +4,18 @@
 
 const CONFIG = {
   slagingsdrempel: 0.70,
-  afteltijd: 15,
-  totaalVragenVast: 24
+  afteltijd: 15
 };
+
+// Berekend na laden van questions.js en content.js
+function getTotaalVragen() {
+  return THEMA_INHOUD.reduce((som, t) => som + getVragenVanThema(t.thema).length, 0);
+}
+
+function getVragenVanThema(thema) {
+  return ALLE_VRAGEN.filter(v => v.thema === thema);
+}
+
 // State
 let deelnemerNaam = '';
 let deelnemerAchternaam = '';
@@ -48,6 +57,18 @@ const schermen = {
 function toonScherm(naam) {
   Object.values(schermen).forEach(s => s.classList.remove('actief'));
   schermen[naam].classList.add('actief');
+}
+
+// =====================
+// GLOBAAL VRAAGNUMMER
+// =====================
+
+function berekenGlobalVraagNr(themaIndex, vraagInThema) {
+  let nr = vraagInThema + 1;
+  for (let i = 0; i < themaIndex; i++) {
+    nr += getVragenVanThema(THEMA_INHOUD[i].thema).length;
+  }
+  return nr;
 }
 
 // =====================
@@ -128,13 +149,13 @@ document.getElementById('btn-naar-start').addEventListener('click', () => {
   const heeftVoortgang = laadVoortgang();
   if (heeftVoortgang && deelnemerNaam === voornaam && deelnemerAchternaam === achternaam) {
     const hervatten = confirm(
-      `Welkom terug, ${voornaam}! Er is opgeslagen voortgang gevonden (onderwerp ${huidigThemaIndex + 1} van 12). Wil je verdergaan waar je gebleven was?`
+      `Welkom terug, ${voornaam}! Er is opgeslagen voortgang gevonden (onderwerp ${huidigThemaIndex + 1} van ${THEMA_INHOUD.length}). Wil je verdergaan waar je gebleven was?`
     );
     if (hervatten) {
       quizBezig = true;
       if (herkansingModus) {
         toonHerkansingVraag();
-      } else if (totaalVragen >= CONFIG.totaalVragenVast) {
+      } else if (totaalVragen >= getTotaalVragen()) {
         toonEinde();
       } else {
         toonVraag();
@@ -228,25 +249,22 @@ document.getElementById('btn-naar-vragen').addEventListener('click', () => {
 // VRAAG SCHERM
 // =====================
 
-function getVragenVanThema(thema) {
-  return ALLE_VRAGEN.filter(v => v.thema === thema);
-}
-
 function toonVraag() {
   const thema = THEMA_INHOUD[huidigThemaIndex];
   const vragen = getVragenVanThema(thema.thema);
   const vraag = vragen[huidigVraagInThema];
-  const vraagNum = huidigVraagInThema + 1;
+  const aantalInThema = vragen.length;
 
-  const globalVraagNr = (huidigThemaIndex * 2) + huidigVraagInThema + 1;
-  const globalTotaal = THEMA_INHOUD.length * 2;
+  const globalVraagNr = berekenGlobalVraagNr(huidigThemaIndex, huidigVraagInThema);
+  const globalTotaal = getTotaalVragen();
   const pct = ((globalVraagNr - 1) / globalTotaal) * 100;
 
   document.getElementById('voortgang-tekst').textContent =
     `Vraag ${globalVraagNr} van ${globalTotaal}`;
   document.getElementById('voortgang-balk').style.width = pct + '%';
   document.getElementById('vraag-thema').textContent = thema.thema;
-  document.getElementById('vraag-nummer-badge').textContent = `Vraag ${vraagNum} van 2`;
+  document.getElementById('vraag-nummer-badge').textContent =
+    `Vraag ${huidigVraagInThema + 1} van ${aantalInThema}`;
   document.getElementById('vraag-tekst').textContent = vraag.vraag;
 
   const feedback = document.getElementById('feedback-container');
@@ -303,8 +321,8 @@ function verwerkAntwoord(gekozenIndex, gekliktBtn, vraag) {
   document.getElementById('feedback-artikel').textContent = '— ' + vraag.artikel;
   document.getElementById('btn-volgende').classList.add('actief');
 
-  const globalVraagNr = (huidigThemaIndex * 2) + huidigVraagInThema + 1;
-  const globalTotaal = THEMA_INHOUD.length * 2;
+  const globalVraagNr = berekenGlobalVraagNr(huidigThemaIndex, huidigVraagInThema);
+  const globalTotaal = getTotaalVragen();
   document.getElementById('voortgang-balk').style.width = (globalVraagNr / globalTotaal * 100) + '%';
 
   slaVoortgangOp();
@@ -419,15 +437,15 @@ function toonEinde() {
   wisVoortgang();
   toonScherm('einde');
 
-  const beoordeeldVragen = CONFIG.totaalVragenVast;
-  const veiligScore = Math.min(score, beoordeeldVragen);
-  const percentage = veiligScore / beoordeeldVragen;
+  const totaal = getTotaalVragen();
+  const veiligScore = Math.min(score, totaal);
+  const percentage = veiligScore / totaal;
   const geslaagd = percentage >= CONFIG.slagingsdrempel;
 
   document.getElementById('einde-naam-tekst').textContent =
     `${deelnemerNaam} ${deelnemerAchternaam}${deelnemerOrganisatie ? ' — ' + deelnemerOrganisatie : ''}`;
   document.getElementById('eind-score').textContent =
-    `${veiligScore} van de ${beoordeeldVragen} vragen goed`;
+    `${veiligScore} van de ${totaal} vragen goed`;
   document.getElementById('eind-percentage').textContent =
     Math.round(percentage * 100) + '%';
 
@@ -443,13 +461,14 @@ function toonEinde() {
   overzicht.innerHTML = '';
   THEMA_INHOUD.forEach(t => {
     const res = resultatenPerThema[t.thema] || { goed: 0, fout: 0, totaal: 0 };
-    const pct = res.totaal > 0 ? Math.round((res.goed / res.totaal) * 100) : 0;
-    const status = res.goed === res.totaal ? 'goed' : res.goed > 0 ? 'half' : 'fout';
+    const aantalInThema = getVragenVanThema(t.thema).length;
+    const pct = aantalInThema > 0 ? Math.round((res.goed / aantalInThema) * 100) : 0;
+    const status = res.goed === aantalInThema ? 'goed' : res.goed > 0 ? 'half' : 'fout';
     const rij = document.createElement('div');
     rij.className = `auditpunt-rij ${status}`;
     rij.innerHTML = `
       <span class="auditpunt-naam">${t.thema}</span>
-      <span class="auditpunt-score">${res.goed}/${res.totaal} — ${pct}%</span>
+      <span class="auditpunt-score">${res.goed}/${aantalInThema} — ${pct}%</span>
       <span class="auditpunt-icoon">${status === 'goed' ? '✓' : status === 'half' ? '~' : '✗'}</span>
     `;
     overzicht.appendChild(rij);
@@ -547,15 +566,15 @@ document.getElementById('btn-certificaat').addEventListener('click', () => {
     W / 2, 123, { align: 'center', maxWidth: W - 80 }
   );
 
-  const beoordeeldVragen = CONFIG.totaalVragenVast;
-  const veiligScore = Math.min(score, beoordeeldVragen);
-  const pct = Math.round((veiligScore / beoordeeldVragen) * 100);
+  const totaal = getTotaalVragen();
+  const veiligScore = Math.min(score, totaal);
+  const pct = Math.round((veiligScore / totaal) * 100);
 
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(12);
   doc.setTextColor(26, 122, 74);
   doc.text(
-    `Score: ${veiligScore} van de ${beoordeeldVragen} vragen goed (${pct}%)`,
+    `Score: ${veiligScore} van de ${totaal} vragen goed (${pct}%)`,
     W / 2, 135, { align: 'center' }
   );
 
